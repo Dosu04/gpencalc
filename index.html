@@ -1,8 +1,21 @@
 <html>
 <head>
+
 <title>GP Ltd</title>
-<link rel="shortcut icon" href="Gplogo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="gplogo.png">
 <style>
+@viewport{
+	zoom:1.0;
+	width: extent-to-zoom;
+}
+
+@-ms-viewport{
+	width: extent-to-zoom;
+	zoom:1.0;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -32,7 +45,7 @@ overflow: hidden;
 }
 body {
   overflow-x: hidden;
-  max-width: 100%;
+  max-width:100%
 }
 </style>
 <link rel="stylesheet" href="Pstyle.css">
@@ -40,8 +53,11 @@ body {
 </head>
 
 <body style="background-color:#cdcdc1;">
+
+<div class="wrapper">
+
 <div>
-<image src="Gplogo.png" align="left" width="45"  id="home">
+<image src="gplogo.png" align="left" width="45"  id="home">
 <h1 style="text-align:center" id="Gptitle">Guaranteed Power Ltd</h1>
 </div>
 <div id="navnav" style="clear:both">
@@ -77,21 +93,21 @@ body {
   </tr>
   <tr>
     <td>Ton</td>
-    <td><input id="inputTon" type="number" placeholder="t" size="10" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td><input id="inputTon" type="number" placeholder="t" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
     <td>Metric Ton </td>
-    <td><input id="inputMton" type="number" placeholder="Mt" size="10" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td><input id="inputMton" type="number" placeholder="Mt" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Std Cubic Feet</td>
-    <td><input id="inputSCF" type="number" placeholder="SCF" size="10" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td><input id="inputSCF" type="number" placeholder="SCF" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
     <td>Normal Cubic Meters</td>
-    <td><input id="inputNcm" type="number" placeholder="Nm3" size="10" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td><input id="inputNcm" type="number" placeholder="Nm3" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Liquid Gallons</td>
-    <td><input id="inputGal" type="number" placeholder="Gal" size="10" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td><input id="inputGal" type="number" placeholder="Gal" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
     <td>Liquid Liters</td>
-    <td><input id="inputLiters" type="number" placeholder="L" size="10" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td><input id="inputLiters" type="number" placeholder="L" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
   </tr>
 </table>
 </form>
@@ -107,27 +123,27 @@ body {
   </tr>
   <tr>
     <td>Pounds</td>
-    <td><input id="inputPoundsN" type="number" placeholder="lb" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputPoundsN" type="number" placeholder="lb" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
     <td>Kilorams</td>
-    <td><input id="inputKilogramsN" type="number" placeholder="Kg" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputKilogramsN" type="number" placeholder="Kg" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Ton</td>
-    <td><input id="inputTonN" type="number" placeholder="t" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputTonN" type="number" placeholder="t" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
     <td>Metric Ton </td>
-    <td><input id="inputMtonN" type="number" placeholder="Mt" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputMtonN" type="number" placeholder="Mt" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Std Cubic Feet</td>
-    <td><input id="inputSCFN" type="number" placeholder="SCF" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputSCFN" type="number" placeholder="SCF" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
     <td>Normal Cubic Meters</td>
-    <td><input id="inputNcmN" type="number" placeholder="Nm3" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputNcmN" type="number" placeholder="Nm3" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Liquid Gallons</td>
-    <td><input id="inputGalN" type="number" placeholder="Gal" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputGalN" type="number" placeholder="Gal" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
     <td>Liquid Liters</td>
-    <td><input id="inputLitersN" type="number" placeholder="L" size="10" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td><input id="inputLitersN" type="number" placeholder="L" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
   </tr>
 </table>
 </form>
@@ -143,27 +159,33 @@ body {
   </tr>
   <tr>
     <td>Pounds</td>
-    <td><input id="inputPoundsC" type="number" placeholder="lb" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputPoundsC" type="number" placeholder="lb" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
     <td>Kilorams</td>
-    <td><input id="inputKilogramsC" type="number" placeholder="Kg" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputKilogramsC" type="number" placeholder="Kg" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Ton</td>
-    <td><input id="inputTonC" type="number" placeholder="t" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputTonC" type="number" placeholder="t" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
     <td>Metric Ton </td>
-    <td><input id="inputMtonC" type="number" placeholder="Mt" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputMtonC" type="number" placeholder="Mt" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Std Cubic Feet</td>
-    <td><input id="inputSCFC" type="number" placeholder="SCF" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputSCFC" type="number" placeholder="SCF" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
     <td>Normal Cubic Meters</td>
-    <td><input id="inputNcmC" type="number" placeholder="Nm3" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputNcmC" type="number" placeholder="Nm3" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
   </tr>
   <tr>
     <td>Liquid Gallons</td>
-    <td><input id="inputGalC" type="number" placeholder="Gal" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputGalC" type="number" placeholder="Gal" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
     <td>Liquid Liters</td>
-    <td><input id="inputLitersC" type="number" placeholder="L" size="10" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td><input id="inputLitersC" type="number" placeholder="L" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Ice Cubic Feet</td>
+    <td><input id="inputICFC" type="number" placeholder="ft3" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td>Ice Cubic Meters</td>
+    <td><input id="inputICMC" type="number" placeholder="m3" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
   </tr>
 </table>
 </form>
@@ -179,9 +201,9 @@ body {
   <tr>
 <tr>
     <td>Celsius</td>
-    <td><input id="inputCelsius" type="number" placeholder="°C" size="10" oninput="tempConverter(this.id,this.value)" onchange="tempConverter(this.id,this.value)"></input></td>
+    <td><input id="inputCelsius" type="number" placeholder="°C" oninput="tempConverter(this.id,this.value)" onchange="tempConverter(this.id,this.value)"></input></td>
     <td>Fahrenheit</td>
-    <td><input id="inputFahrenheit" type="number" placeholder="°F" size="10" oninput="tempConverter(this.id,this.value)" onchange="tempConverter(this.id,this.value)"></input></input></td>
+    <td><input id="inputFahrenheit" type="number" placeholder="°F" oninput="tempConverter(this.id,this.value)" onchange="tempConverter(this.id,this.value)"></input></input></td>
 </tr>
 </table>
 </form>
@@ -355,6 +377,7 @@ body {
 </form>
 </div>
 
+</div>
 
 <!-- Oxygen-->
 <script>
@@ -543,79 +566,119 @@ function coConverter(source,valNum) {
   var inputNcmC = document.getElementById("inputNcmC");
   var inputGalC = document.getElementById("inputGalC");
   var inputLitersC = document.getElementById("inputLitersC");
+  var inputICFC = document.getElementById("inputICFC");
+  var inputICMC = document.getElementById("inputICMC");
   
   if (source=="inputPoundsC") {
     inputKilogramsC.value=(valNum*0.4535).toFixed(4);
     inputTonC.value=(valNum*0.0005).toFixed(4);
-    inputSCFC.value=(valNum*12.0758).toFixed(4);
+    inputSCFC.value=(valNum*8.7413).toFixed(4);
     inputMtonC.value=(valNum*0.0005).toFixed(4);
-    inputNcmC.value=(valNum*0.3174).toFixed(4);
-    inputGalC.value=(valNum*0.105).toFixed(4);
-    inputLitersC.value=(valNum*0.3973).toFixed(4);
+    inputNcmC.value=(valNum*0.2294).toFixed(4);
+    inputGalC.value=(valNum*0.1181).toFixed(4);
+    inputLitersC.value=(valNum*0.4468).toFixed(4);
+    inputICMC.value=(valNum*0.0003).toFixed(4);
+    inputICFC.value=(valNum*0.0103).toFixed(4);
   }
    if (source=="inputKilogramsC") {
     inputPoundsC.value=(valNum*2.205).toFixed(4);
     inputTonC.value=(valNum*0.0011).toFixed(4);
-    inputSCFC.value=(valNum*26.6272).toFixed(4);
+    inputSCFC.value=(valNum*19.2745).toFixed(4);
     inputMtonC.value=(valNum*0.001).toFixed(4);
-    inputNcmC.value=(valNum*0.6998).toFixed(4);
-    inputGalC.value=(valNum*0.2314).toFixed(4);
-    inputLitersC.value=(valNum*0.8760).toFixed(4);
+    inputNcmC.value=(valNum*0.5058).toFixed(4);
+    inputGalC.value=(valNum*0.2603).toFixed(4);
+    inputLitersC.value=(valNum*0.9853).toFixed(4);
+    inputICMC.value=(valNum*0.0006).toFixed(4);
+    inputICFC.value=(valNum*0.0226).toFixed(4);
   }
     if (source=="inputTonC") {
     inputPoundsC.value=(valNum*2000).toFixed(4);
     inputKilogramsC.value=(valNum*907.0295).toFixed(4);
-    inputSCFC.value=(valNum*24151.6725).toFixed(4);
+    inputSCFC.value=(valNum*17482.5175).toFixed(4);
     inputMtonC.value=(valNum*0.9070).toFixed(4);
-    inputNcmC.value=(valNum*634.7191).toFixed(4);
-    inputGalC.value=(valNum*209.9297).toFixed(4);
-    inputLitersC.value=(valNum*794.9567).toFixed(4);
+    inputNcmC.value=(valNum*458.8208).toFixed(4);
+    inputGalC.value=(valNum*236.1275).toFixed(4);
+    inputLitersC.value=(valNum*893.6550).toFixed(4);
+    inputICMC.value=(valNum*0.5806).toFixed(4);
+    inputICFC.value=(valNum*20.5002).toFixed(4);
   }
     if (source=="inputMtonC") {
     inputPoundsC.value=(valNum*2205).toFixed(4);
     inputKilogramsC.value=(valNum*1000).toFixed(4);
-    inputSCFC.value=(valNum*26627.2189).toFixed(4);
+    inputSCFC.value=(valNum*19274.4755).toFixed(4);
     inputTonC.value=(valNum*1.1025).toFixed(4);
-    inputNcmC.value=(valNum*699.7778).toFixed(4);
-    inputGalC.value=(valNum*231.4475).toFixed(4);
-    inputLitersC.value=(valNum*876.0429).toFixed(4);
+    inputNcmC.value=(valNum*505.85).toFixed(4);
+    inputGalC.value=(valNum*260.3306).toFixed(4);
+    inputLitersC.value=(valNum*985.2547).toFixed(4);
+    inputICMC.value=(valNum*0.6401).toFixed(4);
+    inputICFC.value=(valNum*22.6015).toFixed(4);
   }
     if (source=="inputSCFC") {
-    inputPoundsC.value=(valNum*0.0828).toFixed(4);
-    inputKilogramsC.value=(valNum*0.0376).toFixed(4);
-    inputMtonC.value=(valNum*0.00003755555555).toFixed(4);
-    inputTonC.value=(valNum*1.1025).toFixed(4);
-    inputNcmC.value=(valNum*0.0263).toFixed(4);
-    inputGalC.value=(valNum*0.0087).toFixed(4);
-    inputLitersC.value=(valNum*0.329).toFixed(4);
+    inputPoundsC.value=(valNum*0.1144).toFixed(4);
+    inputKilogramsC.value=(valNum*0.0519).toFixed(4);
+    inputMtonC.value=(valNum*0.0.0001).toFixed(4);
+    inputTonC.value=(valNum*0.0001).toFixed(4);
+    inputNcmC.value=(valNum*0.0262).toFixed(4);
+    inputGalC.value=(valNum*0.0135).toFixed(4);
+    inputLitersC.value=(valNum*0.0511).toFixed(4);
+    inputICMC.value=(valNum*0.000033209050975893245).toFixed(4);
+    inputICFC.value=(valNum*0.0012).toFixed(4);
   }
     if (source=="inputNcmC") {
-    inputPoundsC.value=(valNum*3.151).toFixed(4);
-    inputKilogramsC.value=(valNum*1.4290).toFixed(4);
-    inputMtonC.value=(valNum*0.0014).toFixed(4);
-    inputTonC.value=(valNum*0.0016).toFixed(4);
-    inputSCFC.value=(valNum*38.051).toFixed(4);
-    inputGalC.value=(valNum*0.3307).toFixed(4);
-    inputLitersC.value=(valNum*1.2519).toFixed(4);
+    inputPoundsC.value=(valNum*4.359).toFixed(4);
+    inputKilogramsC.value=(valNum*1.9769).toFixed(4);
+    inputMtonC.value=(valNum*0.002).toFixed(4);
+    inputTonC.value=(valNum*0.0022).toFixed(4);
+    inputSCFC.value=(valNum*38.1031).toFixed(4);
+    inputGalC.value=(valNum*0.5146).toFixed(4);
+    inputLitersC.value=(valNum*1.9477).toFixed(4);
+    inputICMC.value=(valNum*0.0013).toFixed(4);
+    inputICFC.value=(valNum*0.0447).toFixed(4);
   }
     if (source=="inputGalC") {
-    inputPoundsC.value=(valNum*9.527).toFixed(4);
-    inputKilogramsC.value=(valNum*4.3206).toFixed(4);
-    inputMtonC.value=(valNum*0.0043).toFixed(4);
-    inputTonC.value=(valNum*0.0048).toFixed(4);
-    inputSCFC.value=(valNum*115.0465).toFixed(4);
-    inputLitersC.value=(valNum*3.7851).toFixed(4);
-    inputNcmC.value=(valNum*3.0235).toFixed(4);
+    inputPoundsC.value=(valNum*8.47).toFixed(4);
+    inputKilogramsC.value=(valNum*3.8413).toFixed(4);
+    inputMtonC.value=(valNum*0.0038).toFixed(4);
+    inputTonC.value=(valNum*0.0042).toFixed(4);
+    inputSCFC.value=(valNum*74.0385).toFixed(4);
+    inputLitersC.value=(valNum*3.7846).toFixed(4);
+    inputNcmC.value=(valNum*1.9431).toFixed(4);
+    inputICMC.value=(valNum*0.0025).toFixed(4);
+    inputICFC.value=(valNum*0.0868).toFixed(4);
   }
     if (source=="inputLitersC") {
-    inputPoundsC.value=(valNum*2.517).toFixed(4);
-    inputKilogramsC.value=(valNum*1.1415).toFixed(4);
-    inputMtonC.value=(valNum*0.0011).toFixed(4);
-    inputTonC.value=(valNum*0.0013).toFixed(4);
-    inputSCFC.value=(valNum*30.3949).toFixed(4);
+    inputPoundsC.value=(valNum*2.238).toFixed(4);
+    inputKilogramsC.value=(valNum*1.015).toFixed(4);
+    inputMtonC.value=(valNum*0.0010).toFixed(4);
+    inputTonC.value=(valNum*0.0011).toFixed(4);
+    inputSCFC.value=(valNum*19.5629).toFixed(4);
     inputGalC.value=(valNum*0.2642).toFixed(4);
-    inputNcmC.value=(valNum*0.7988).toFixed(4);
+    inputNcmC.value=(valNum*0.5134).toFixed(4);
+    inputICMC.value=(valNum*0.0006).toFixed(4);
+    inputICFC.value=(valNum*0.0229).toFixed(4);
   }
+    if (source=="inputICFC") {
+    inputPoundsC.value=(valNum*97.56).toFixed(4);
+    inputKilogramsC.value=(valNum*44.2449).toFixed(4);
+    inputMtonC.value=(valNum*0.0442).toFixed(4);
+    inputTonC.value=(valNum*0.0488).toFixed(4);
+    inputSCFC.value=(valNum*852.7972).toFixed(4);
+    inputGalC.value=(valNum*11.5183).toFixed(4);
+    inputNcmC.value=(valNum*22.3813).toFixed(4);
+    inputLitersC.value=(valNum*43.5925).toFixed(4);
+    inputICMC.value=(valNum*0.0283).toFixed(4);
+   }
+    if (source=="inputICMC") {
+    inputPoundsC.value=(valNum*3444.844).toFixed(4);
+    inputKilogramsC.value=(valNum*1562.2875).toFixed(4);
+    inputMtonC.value=(valNum*1.5623).toFixed(4);
+    inputTonC.value=(valNum*1.7224).toFixed(4);
+    inputSCFC.value=(valNum*30112.2727).toFixed(4);
+    inputGalC.value=(valNum*406.7112).toFixed(4);
+    inputNcmC.value=(valNum*790.2831).toFixed(4);
+    inputLitersC.value=(valNum*1539.2511).toFixed(4);
+    inputICFC.value=(valNum*35.3100).toFixed(4);
+   }
 }
 </script>
 
@@ -756,5 +819,6 @@ function energyConverter(source,valNum) {
   }
 }
 </script>
+
 </body>
 </html>
