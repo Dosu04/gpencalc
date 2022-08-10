@@ -1,0 +1,761 @@
+<html>
+<head>
+<title>GP Ltd</title>
+<link rel="shortcut icon" href="gplogo.png">
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td, tr {
+  text-align: center;
+  padding: 8px;
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: black;
+ 
+}
+input {
+	border: solid 3px #111;
+	text-align: center;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	height:30px;
+	background-color: #cdcdc1;
+	resize: none;
+overflow: hidden;
+}
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+</style>
+<link rel="stylesheet" href="Pstyle.css">
+
+</head>
+
+<body style="background-color:#cdcdc1;">
+<div>
+<image src="gplogo.png" align="left" width="45"  id="home">
+<h1 style="text-align:center" id="Gptitle">Guaranteed Power Ltd</h1>
+</div>
+<div id="navnav" style="clear:both">
+<nav class="navmenu">
+	<ul>
+		<li><a href="#calc3">Oxygen</a></li>
+		<li><a href="#calc2">Nitrogen</a></li>
+		<li><a href="#calc6">CO2</a></li>
+		<li><a href="#calc7">Temperature</a></li>
+		<li><a href="#calc8">Pressure</a></li>
+		<li><a href="#calc9">Volume</a></li>
+		<li><a href="#calc10">Floow/Usage Rate</a></li>
+		<li><a href="#calc4">Natural Gas</a></li>
+		<li><a href="#calc5">Crude Oil</a></li>
+		<li><a href="#calc1">Power and Energy</a></li>
+		<li style="float:right"><a href="#home" class="active" >Quantity Conversions Calculator</a></li>		
+        </ul>
+</nav>
+</div>
+
+<h2 id="calc3" style="color:Black; text-align:center;">Oxygen</h2>
+<div id="tablebg">
+<form>
+<table border=2>
+<tr>
+    <th colspan=4>Oxygen</th>
+  </tr>
+  <tr>
+    <td>Pounds</td>
+    <td><input id="inputPounds" type="number" placeholder="lb" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td>Kilorams</td>
+    <td><input id="inputKilograms" type="number" placeholder="Kg" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Ton</td>
+    <td><input id="inputTon" type="number" placeholder="t" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td>Metric Ton </td>
+    <td><input id="inputMton" type="number" placeholder="Mt" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Std Cubic Feet</td>
+    <td><input id="inputSCF" type="number" placeholder="SCF" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td>Normal Cubic Meters</td>
+    <td><input id="inputNcm" type="number" placeholder="Nm3" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Liquid Gallons</td>
+    <td><input id="inputGal" type="number" placeholder="Gal" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+    <td>Liquid Liters</td>
+    <td><input id="inputLiters" type="number" placeholder="L" oninput="gasConverter(this.id,this.value)" onchange="gasConverter(this.id,this.value)"></input></td>
+  </tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc2" style="color:Black; text-align:center;">Nitrogen</h2>
+<div id="tablebg">
+<form>
+<table border=2>
+<tr>
+    <th colspan=4>Nitrogen</th>
+  </tr>
+  <tr>
+    <td>Pounds</td>
+    <td><input id="inputPoundsN" type="number" placeholder="lb" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td>Kilorams</td>
+    <td><input id="inputKilogramsN" type="number" placeholder="Kg" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Ton</td>
+    <td><input id="inputTonN" type="number" placeholder="t" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td>Metric Ton </td>
+    <td><input id="inputMtonN" type="number" placeholder="Mt" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Std Cubic Feet</td>
+    <td><input id="inputSCFN" type="number" placeholder="SCF" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td>Normal Cubic Meters</td>
+    <td><input id="inputNcmN" type="number" placeholder="Nm3" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Liquid Gallons</td>
+    <td><input id="inputGalN" type="number" placeholder="Gal" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+    <td>Liquid Liters</td>
+    <td><input id="inputLitersN" type="number" placeholder="L" oninput="nitroConverter(this.id,this.value)" onchange="nitroConverter(this.id,this.value)"></input></td>
+  </tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc6" style="color:Black; text-align:center;">CO2</h2>
+<div id="tablebg">
+<form>
+<table border=2>
+<tr>
+    <th colspan=4>CO2</th>
+  </tr>
+  <tr>
+    <td>Pounds</td>
+    <td><input id="inputPoundsC" type="number" placeholder="lb" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td>Kilorams</td>
+    <td><input id="inputKilogramsC" type="number" placeholder="Kg" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Ton</td>
+    <td><input id="inputTonC" type="number" placeholder="t" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td>Metric Ton </td>
+    <td><input id="inputMtonC" type="number" placeholder="Mt" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Std Cubic Feet</td>
+    <td><input id="inputSCFC" type="number" placeholder="SCF" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td>Normal Cubic Meters</td>
+    <td><input id="inputNcmC" type="number" placeholder="Nm3" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Liquid Gallons</td>
+    <td><input id="inputGalC" type="number" placeholder="Gal" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+    <td>Liquid Liters</td>
+    <td><input id="inputLitersC" type="number" placeholder="L" oninput="coConverter(this.id,this.value)" onchange="coConverter(this.id,this.value)"></input></td>
+  </tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc7" style="color:Black; text-align:center;">Temperature</h2>
+<div id="tablebg">
+<form>
+<table border=2s>
+<tr>
+    <th colspan=4>Temperature</th>
+  <tr>
+<tr>
+    <td>Celsius</td>
+    <td><input id="inputCelsius" type="number" placeholder="°C" oninput="tempConverter(this.id,this.value)" onchange="tempConverter(this.id,this.value)"></input></td>
+    <td>Fahrenheit</td>
+    <td><input id="inputFahrenheit" type="number" placeholder="°F" oninput="tempConverter(this.id,this.value)" onchange="tempConverter(this.id,this.value)"></input></input></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc8" style="color:Black; text-align:center;">Pressure</h2>
+<div id="tablebg">
+<form>
+<table border=2s>
+<tr>
+    <th colspan=4>Pressure</th>
+  <tr>
+<tr>
+    <td>Cubic Meters </td>
+    <td><input type="number"></input></td>
+    <td>Therms </td>
+    <td><input type="number"></input></td>
+</tr>
+<tr>    
+    <td>Btus </td>
+    <td><input type="number"></input></td>
+    <td>Mega Joules </td>
+    <td><input type="number"></input></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc9" style="color:Black; text-align:center;">Volume</h2>
+<div id="tablebg">
+<form>
+<table border=2s>
+<tr>
+    <th colspan=4>Volume</th>
+  <tr>
+<tr>
+<tr>
+    <td>Cubic Meters </td>
+    <td><input type="number"></input></td>
+    <td>Therms </td>
+    <td><input type="number"></input></td>
+</tr>
+<tr>    
+    <td>Btus </td>
+    <td><input type="number"></input></td>
+    <td>Mega Joules </td>
+    <td><input type="number"></input></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+
+<h2 id="calc10" style="color:Black; text-align:center;">Flow/Usage Rate</h2>
+<div id="tablebg">
+<form>
+<table border=2s>
+  <tr>
+    <th colspan=4>Flow/Usage Rate</th>
+  <tr>
+<tr>
+    <td>Cubic Meters </td>
+    <td><input type="number"></input></td>
+    <td>Therms </td>
+    <td><input type="number"></input></td>
+</tr>
+<tr>    
+    <td>Btus </td>
+    <td><input type="number"></input></td>
+    <td>Mega Joules </td>
+    <td><input type="number"></input></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc4" style="color:Black; text-align:center;">Natural Gas</h2>
+<div id="tablebg">
+<form>
+<table border=2s>
+ <tr>
+    <th colspan=4>Natural Gas</th>
+  </tr>
+<tr>
+    <td>Pounds</td>
+    <td><input id="inputPoundsG" type="number" placeholder="lb" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+    <td>Kilorams</td>
+    <td><input id="inputKilogramsG" type="number" placeholder="Kg" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Ton</td>
+    <td><input id="inputTonG" type="number" placeholder="t" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+    <td>Metric Ton </td>
+    <td><input id="inputMtonG" type="number" placeholder="Mt" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Std Cubic Feet</td>
+    <td><input id="inputSCFG" type="number" placeholder="SCF" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+    <td>Normal Cubic Meters</td>
+    <td><input id="inputNcmG" type="number" placeholder="Nm3" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <td>Liquid Gallons</td>
+    <td><input id="inputGalG" type="number" placeholder="Gal" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+    <td>Liquid Liters</td>
+    <td><input id="inputLitersG" type="number" placeholder="L" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
+  </tr>
+</table>
+</form>
+</div>
+
+
+<h2 id="calc5" style="color:Black; text-align:center;">Crude Oil</h2>
+<div id="tablebg">
+<form>
+<table border=2s>
+ <tr>
+    <th colspan=4>Crude Oil</th>
+  <tr>
+<tr>
+    <td>Meteric Tons </td>
+    <td><input type="number"></input></td>
+    <td>Long Tons </td>
+    <td><input type="number"></input></td>
+</tr>
+<tr>    
+    <td>Btus </td>
+    <td><input type="number"></input></td>
+    <td>Mega Joules </td>
+    <td><input type="number"></input></td>
+</tr>
+<tr>    
+    <td>Barrels </td>
+    <td><input type="number"></input></td>
+    <td>US Gallons </td>
+    <td><input type="number"></input></td>
+</tr>
+</table>
+</form>
+</div>
+
+
+
+<h2 id="calc1" style="color:Black; text-align:center;">Power and Energy</h2>
+<div id="tablebg">
+<form>
+<table border=2>
+  <tr>
+    <th colspan=4>Power</th>
+  <tr>
+  <tr>
+    <td>Horsepower</td>
+    <td><input id="inputHorsepower" type="number" placeholder="P" oninput="powerConverter(this.id,this.value)" onchange="powerConverter(this.id,this.value)"></input></td>
+    <td>Kilowatts</td>
+    <td><input id="inputKilowatts" type="number" placeholder="kWh" oninput="powerConverter(this.id,this.value)" onchange="powerConverter(this.id,this.value)"></input></td>
+  </tr>
+  <tr>
+    <th colspan=4>Energy</th>
+  </tr> 
+  <tr>
+    <td>BTU </td>
+    <td><input id="inputBtu" type="number" placeholder="BTU" oninput="energyConverter(this.id,this.value)" onchange="energyConverter(this.id,this.value)"></input></td>
+    <td>Joule </td>
+    <td><input id="inputJoule" type="number" placeholder="J" oninput="energyConverter(this.id,this.value)" onchange="energyConverter(this.id,this.value)"></input></td>
+  </tr>
+</table>
+</form>
+</div>
+
+
+<!-- Oxygen-->
+<script>
+function gasConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputPounds = document.getElementById("inputPounds");
+  var inputKilograms = document.getElementById("inputKilograms");
+  var inputTon = document.getElementById("inputTon");
+  var inputSCF = document.getElementById("inputSCF");
+  var inputMton = document.getElementById("inputMton");
+  var inputNcm = document.getElementById("inputNcm");
+  var inputGal = document.getElementById("inputGal");
+  var inputLiters = document.getElementById("inputLiters");
+  
+  if (source=="inputPounds") {
+    inputKilograms.value=(valNum*0.4535).toFixed(4);
+    inputTon.value=(valNum*0.0005).toFixed(4);
+    inputSCF.value=(valNum*12.0758).toFixed(4);
+    inputMton.value=(valNum*0.0005).toFixed(4);
+    inputNcm.value=(valNum*0.3174).toFixed(4);
+    inputGal.value=(valNum*0.105).toFixed(4);
+    inputLiters.value=(valNum*0.3973).toFixed(4);
+  }
+   if (source=="inputKilograms") {
+    inputPounds.value=(valNum*2.205).toFixed(4);
+    inputTon.value=(valNum*0.0011).toFixed(4);
+    inputSCF.value=(valNum*26.6272).toFixed(4);
+    inputMton.value=(valNum*0.001).toFixed(4);
+    inputNcm.value=(valNum*0.6998).toFixed(4);
+    inputGal.value=(valNum*0.2314).toFixed(4);
+    inputLiters.value=(valNum*0.8760).toFixed(4);
+  }
+    if (source=="inputTon") {
+    inputPounds.value=(valNum*2000).toFixed(4);
+    inputKilograms.value=(valNum*907.0295).toFixed(4);
+    inputSCF.value=(valNum*24151.6725).toFixed(4);
+    inputMton.value=(valNum*0.9070).toFixed(4);
+    inputNcm.value=(valNum*634.7191).toFixed(4);
+    inputGal.value=(valNum*209.9297).toFixed(4);
+    inputLiters.value=(valNum*794.9567).toFixed(4);
+  }
+    if (source=="inputMton") {
+    inputPounds.value=(valNum*2205).toFixed(4);
+    inputKilograms.value=(valNum*1000).toFixed(4);
+    inputSCF.value=(valNum*26627.2189).toFixed(4);
+    inputTon.value=(valNum*1.1025).toFixed(4);
+    inputNcm.value=(valNum*699.7778).toFixed(4);
+    inputGal.value=(valNum*231.4475).toFixed(4);
+    inputLiters.value=(valNum*876.0429).toFixed(4);
+  }
+    if (source=="inputSCF") {
+    inputPounds.value=(valNum*0.0828).toFixed(4);
+    inputKilograms.value=(valNum*0.0376).toFixed(4);
+    inputMton.value=(valNum*0.00003755555555).toFixed(4);
+    inputTon.value=(valNum*1.1025).toFixed(4);
+    inputNcm.value=(valNum*0.0263).toFixed(4);
+    inputGal.value=(valNum*0.0087).toFixed(4);
+    inputLiters.value=(valNum*0.329).toFixed(4);
+  }
+    if (source=="inputNcm") {
+    inputPounds.value=(valNum*3.151).toFixed(4);
+    inputKilograms.value=(valNum*1.4290).toFixed(4);
+    inputMton.value=(valNum*0.0014).toFixed(4);
+    inputTon.value=(valNum*0.0016).toFixed(4);
+    inputSCF.value=(valNum*38.051).toFixed(4);
+    inputGal.value=(valNum*0.3307).toFixed(4);
+    inputLiters.value=(valNum*1.2519).toFixed(4);
+  }
+    if (source=="inputGal") {
+    inputPounds.value=(valNum*9.527).toFixed(4);
+    inputKilograms.value=(valNum*4.3206).toFixed(4);
+    inputMton.value=(valNum*0.0043).toFixed(4);
+    inputTon.value=(valNum*0.0048).toFixed(4);
+    inputSCF.value=(valNum*115.0465).toFixed(4);
+    inputLiters.value=(valNum*3.7851).toFixed(4);
+    inputNcm.value=(valNum*3.0235).toFixed(4);
+  }
+    if (source=="inputLiters") {
+    inputPounds.value=(valNum*2.517).toFixed(4);
+    inputKilograms.value=(valNum*1.1415).toFixed(4);
+    inputMton.value=(valNum*0.0011).toFixed(4);
+    inputTon.value=(valNum*0.0013).toFixed(4);
+    inputSCF.value=(valNum*30.3949).toFixed(4);
+    inputGal.value=(valNum*0.2642).toFixed(4);
+    inputNcm.value=(valNum*0.7988).toFixed(4);
+  }
+}
+</script>
+<!-- Nitrogen-->
+<script>
+function nitroConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputPoundsN = document.getElementById("inputPoundsN");
+  var inputKilogramsN = document.getElementById("inputKilogramsN");
+  var inputTonN = document.getElementById("inputTonN");
+  var inputSCFN = document.getElementById("inputSCFN");
+  var inputMtonN = document.getElementById("inputMtonN");
+  var inputNcmN = document.getElementById("inputNcmN");
+  var inputGalN = document.getElementById("inputGalN");
+  var inputLitersN = document.getElementById("inputLitersN");
+  
+  if (source=="inputPoundsN") {
+    inputKilogramsN.value=(valNum*0.4535).toFixed(4);
+    inputTonN.value=(valNum*0.0005).toFixed(4);
+    inputSCFN.value=(valNum*12.0758).toFixed(4);
+    inputMtonN.value=(valNum*0.0005).toFixed(4);
+    inputNcmN.value=(valNum*0.3174).toFixed(4);
+    inputGalN.value=(valNum*0.105).toFixed(4);
+    inputLitersN.value=(valNum*0.3973).toFixed(4);
+  }
+   if (source=="inputKilogramsN") {
+    inputPoundsN.value=(valNum*2.205).toFixed(4);
+    inputTonN.value=(valNum*0.0011).toFixed(4);
+    inputSCFN.value=(valNum*26.6272).toFixed(4);
+    inputMtonN.value=(valNum*0.001).toFixed(4);
+    inputNcmN.value=(valNum*0.6998).toFixed(4);
+    inputGalN.value=(valNum*0.2314).toFixed(4);
+    inputLitersN.value=(valNum*0.8760).toFixed(4);
+  }
+    if (source=="inputTonN") {
+    inputPoundsN.value=(valNum*2000).toFixed(4);
+    inputKilogramsN.value=(valNum*907.0295).toFixed(4);
+    inputSCFN.value=(valNum*24151.6725).toFixed(4);
+    inputMtonN.value=(valNum*0.9070).toFixed(4);
+    inputNcmN.value=(valNum*634.7191).toFixed(4);
+    inputGalN.value=(valNum*209.9297).toFixed(4);
+    inputLitersN.value=(valNum*794.9567).toFixed(4);
+  }
+    if (source=="inputMtonN") {
+    inputPoundsN.value=(valNum*2205).toFixed(4);
+    inputKilogramsN.value=(valNum*1000).toFixed(4);
+    inputSCFN.value=(valNum*26627.2189).toFixed(4);
+    inputTonN.value=(valNum*1.1025).toFixed(4);
+    inputNcmN.value=(valNum*699.7778).toFixed(4);
+    inputGalN.value=(valNum*231.4475).toFixed(4);
+    inputLitersN.value=(valNum*876.0429).toFixed(4);
+  }
+    if (source=="inputSCFN") {
+    inputPoundsN.value=(valNum*0.0828).toFixed(4);
+    inputKilogramsN.value=(valNum*0.0376).toFixed(4);
+    inputMtonN.value=(valNum*0.00003755555555).toFixed(4);
+    inputTonN.value=(valNum*1.1025).toFixed(4);
+    inputNcmN.value=(valNum*0.0263).toFixed(4);
+    inputGalN.value=(valNum*0.0087).toFixed(4);
+    inputLitersN.value=(valNum*0.329).toFixed(4);
+  }
+    if (source=="inputNcmN") {
+    inputPoundsN.value=(valNum*3.151).toFixed(4);
+    inputKilogramsN.value=(valNum*1.4290).toFixed(4);
+    inputMtonN.value=(valNum*0.0014).toFixed(4);
+    inputTonN.value=(valNum*0.0016).toFixed(4);
+    inputSCFN.value=(valNum*38.051).toFixed(4);
+    inputGalN.value=(valNum*0.3307).toFixed(4);
+    inputLitersN.value=(valNum*1.2519).toFixed(4);
+  }
+    if (source=="inputGalN") {
+    inputPoundsN.value=(valNum*9.527).toFixed(4);
+    inputKilogramsN.value=(valNum*4.3206).toFixed(4);
+    inputMtonN.value=(valNum*0.0043).toFixed(4);
+    inputTonN.value=(valNum*0.0048).toFixed(4);
+    inputSCFN.value=(valNum*115.0465).toFixed(4);
+    inputLitersN.value=(valNum*3.7851).toFixed(4);
+    inputNcmN.value=(valNum*3.0235).toFixed(4);
+  }
+    if (source=="inputLitersN") {
+    inputPoundsN.value=(valNum*2.517).toFixed(4);
+    inputKilogramsN.value=(valNum*1.1415).toFixed(4);
+    inputMtonN.value=(valNum*0.0011).toFixed(4);
+    inputTonN.value=(valNum*0.0013).toFixed(4);
+    inputSCFN.value=(valNum*30.3949).toFixed(4);
+    inputGalN.value=(valNum*0.2642).toFixed(4);
+    inputNcmN.value=(valNum*0.7988).toFixed(4);
+  }
+}
+</script>
+
+<!-- CO2-->
+<script>
+function coConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputPoundsC = document.getElementById("inputPoundsC");
+  var inputKilogramsC = document.getElementById("inputKilogramsC");
+  var inputTonC = document.getElementById("inputTonC");
+  var inputSCFC = document.getElementById("inputSCFC");
+  var inputMtonC = document.getElementById("inputMtonC");
+  var inputNcmC = document.getElementById("inputNcmC");
+  var inputGalC = document.getElementById("inputGalC");
+  var inputLitersC = document.getElementById("inputLitersC");
+  
+  if (source=="inputPoundsC") {
+    inputKilogramsC.value=(valNum*0.4535).toFixed(4);
+    inputTonC.value=(valNum*0.0005).toFixed(4);
+    inputSCFC.value=(valNum*12.0758).toFixed(4);
+    inputMtonC.value=(valNum*0.0005).toFixed(4);
+    inputNcmC.value=(valNum*0.3174).toFixed(4);
+    inputGalC.value=(valNum*0.105).toFixed(4);
+    inputLitersC.value=(valNum*0.3973).toFixed(4);
+  }
+   if (source=="inputKilogramsC") {
+    inputPoundsC.value=(valNum*2.205).toFixed(4);
+    inputTonC.value=(valNum*0.0011).toFixed(4);
+    inputSCFC.value=(valNum*26.6272).toFixed(4);
+    inputMtonC.value=(valNum*0.001).toFixed(4);
+    inputNcmC.value=(valNum*0.6998).toFixed(4);
+    inputGalC.value=(valNum*0.2314).toFixed(4);
+    inputLitersC.value=(valNum*0.8760).toFixed(4);
+  }
+    if (source=="inputTonC") {
+    inputPoundsC.value=(valNum*2000).toFixed(4);
+    inputKilogramsC.value=(valNum*907.0295).toFixed(4);
+    inputSCFC.value=(valNum*24151.6725).toFixed(4);
+    inputMtonC.value=(valNum*0.9070).toFixed(4);
+    inputNcmC.value=(valNum*634.7191).toFixed(4);
+    inputGalC.value=(valNum*209.9297).toFixed(4);
+    inputLitersC.value=(valNum*794.9567).toFixed(4);
+  }
+    if (source=="inputMtonC") {
+    inputPoundsC.value=(valNum*2205).toFixed(4);
+    inputKilogramsC.value=(valNum*1000).toFixed(4);
+    inputSCFC.value=(valNum*26627.2189).toFixed(4);
+    inputTonC.value=(valNum*1.1025).toFixed(4);
+    inputNcmC.value=(valNum*699.7778).toFixed(4);
+    inputGalC.value=(valNum*231.4475).toFixed(4);
+    inputLitersC.value=(valNum*876.0429).toFixed(4);
+  }
+    if (source=="inputSCFC") {
+    inputPoundsC.value=(valNum*0.0828).toFixed(4);
+    inputKilogramsC.value=(valNum*0.0376).toFixed(4);
+    inputMtonC.value=(valNum*0.00003755555555).toFixed(4);
+    inputTonC.value=(valNum*1.1025).toFixed(4);
+    inputNcmC.value=(valNum*0.0263).toFixed(4);
+    inputGalC.value=(valNum*0.0087).toFixed(4);
+    inputLitersC.value=(valNum*0.329).toFixed(4);
+  }
+    if (source=="inputNcmC") {
+    inputPoundsC.value=(valNum*3.151).toFixed(4);
+    inputKilogramsC.value=(valNum*1.4290).toFixed(4);
+    inputMtonC.value=(valNum*0.0014).toFixed(4);
+    inputTonC.value=(valNum*0.0016).toFixed(4);
+    inputSCFC.value=(valNum*38.051).toFixed(4);
+    inputGalC.value=(valNum*0.3307).toFixed(4);
+    inputLitersC.value=(valNum*1.2519).toFixed(4);
+  }
+    if (source=="inputGalC") {
+    inputPoundsC.value=(valNum*9.527).toFixed(4);
+    inputKilogramsC.value=(valNum*4.3206).toFixed(4);
+    inputMtonC.value=(valNum*0.0043).toFixed(4);
+    inputTonC.value=(valNum*0.0048).toFixed(4);
+    inputSCFC.value=(valNum*115.0465).toFixed(4);
+    inputLitersC.value=(valNum*3.7851).toFixed(4);
+    inputNcmC.value=(valNum*3.0235).toFixed(4);
+  }
+    if (source=="inputLitersC") {
+    inputPoundsC.value=(valNum*2.517).toFixed(4);
+    inputKilogramsC.value=(valNum*1.1415).toFixed(4);
+    inputMtonC.value=(valNum*0.0011).toFixed(4);
+    inputTonC.value=(valNum*0.0013).toFixed(4);
+    inputSCFC.value=(valNum*30.3949).toFixed(4);
+    inputGalC.value=(valNum*0.2642).toFixed(4);
+    inputNcmC.value=(valNum*0.7988).toFixed(4);
+  }
+}
+</script>
+
+
+<!-- Natural Gas-->
+<script>
+function ngasConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputPoundsG = document.getElementById("inputPoundsG");
+  var inputKilogramsG = document.getElementById("inputKilogramsG");
+  var inputTonG = document.getElementById("inputTonG");
+  var inputSCFG = document.getElementById("inputSCFG");
+  var inputMtonG = document.getElementById("inputMtonG");
+  var inputNcmG = document.getElementById("inputNcmG");
+  var inputGalG = document.getElementById("inputGalG");
+  var inputLitersG = document.getElementById("inputLitersG");
+  
+  if (source=="inputPoundsG") {
+    inputKilogramsG.value=(valNum*0.4535).toFixed(4);
+    inputTonG.value=(valNum*0.0005).toFixed(4);
+    inputSCFG.value=(valNum*12.0758).toFixed(4);
+    inputMtonG.value=(valNum*0.0005).toFixed(4);
+    inputNcmG.value=(valNum*0.3174).toFixed(4);
+    inputGalG.value=(valNum*0.105).toFixed(4);
+    inputLitersG.value=(valNum*0.3973).toFixed(4);
+  }
+   if (source=="inputKilogramsG") {
+    inputPoundsG.value=(valNum*2.205).toFixed(4);
+    inputTonG.value=(valNum*0.0011).toFixed(4);
+    inputSCFG.value=(valNum*26.6272).toFixed(4);
+    inputMtonG.value=(valNum*0.001).toFixed(4);
+    inputNcmG.value=(valNum*0.6998).toFixed(4);
+    inputGalG.value=(valNum*0.2314).toFixed(4);
+    inputLitersG.value=(valNum*0.8760).toFixed(4);
+  }
+    if (source=="inputTonG") {
+    inputPoundsG.value=(valNum*2000).toFixed(4);
+    inputKilogramsG.value=(valNum*907.0295).toFixed(4);
+    inputSCFG.value=(valNum*24151.6725).toFixed(4);
+    inputMtonG.value=(valNum*0.9070).toFixed(4);
+    inputNcmG.value=(valNum*634.7191).toFixed(4);
+    inputGalG.value=(valNum*209.9297).toFixed(4);
+    inputLitersG.value=(valNum*794.9567).toFixed(4);
+  }
+    if (source=="inputMtonG") {
+    inputPoundsG.value=(valNum*2205).toFixed(4);
+    inputKilogramsG.value=(valNum*1000).toFixed(4);
+    inputSCFG.value=(valNum*26627.2189).toFixed(4);
+    inputTonG.value=(valNum*1.1025).toFixed(4);
+    inputNcmG.value=(valNum*699.7778).toFixed(4);
+    inputGalG.value=(valNum*231.4475).toFixed(4);
+    inputLitersG.value=(valNum*876.0429).toFixed(4);
+  }
+    if (source=="inputSCFC") {
+    inputPoundsG.value=(valNum*0.0828).toFixed(4);
+    inputKilogramsG.value=(valNum*0.0376).toFixed(4);
+    inputMtonG.value=(valNum*0.00003755555555).toFixed(4);
+    inputTonG.value=(valNum*1.1025).toFixed(4);
+    inputNcmG.value=(valNum*0.0263).toFixed(4);
+    inputGalG.value=(valNum*0.0087).toFixed(4);
+    inputLitersG.value=(valNum*0.329).toFixed(4);
+  }
+    if (source=="inputNcmG") {
+    inputPoundsG.value=(valNum*3.151).toFixed(4);
+    inputKilogramsG.value=(valNum*1.4290).toFixed(4);
+    inputMtonG.value=(valNum*0.0014).toFixed(4);
+    inputTonG.value=(valNum*0.0016).toFixed(4);
+    inputSCFG.value=(valNum*38.051).toFixed(4);
+    inputGalG.value=(valNum*0.3307).toFixed(4);
+    inputLitersG.value=(valNum*1.2519).toFixed(4);
+  }
+    if (source=="inputGalG") {
+    inputPoundsG.value=(valNum*9.527).toFixed(4);
+    inputKilogramsG.value=(valNum*4.3206).toFixed(4);
+    inputMtonG.value=(valNum*0.0043).toFixed(4);
+    inputTonG.value=(valNum*0.0048).toFixed(4);
+    inputSCFG.value=(valNum*115.0465).toFixed(4);
+    inputLitersG.value=(valNum*3.7851).toFixed(4);
+    inputNcmG.value=(valNum*3.0235).toFixed(4);
+  }
+    if (source=="inputLitersC") {
+    inputPoundsG.value=(valNum*2.517).toFixed(4);
+    inputKilogramsG.value=(valNum*1.1415).toFixed(4);
+    inputMtonG.value=(valNum*0.0011).toFixed(4);
+    inputTonG.value=(valNum*0.0013).toFixed(4);
+    inputSCFG.value=(valNum*30.3949).toFixed(4);
+    inputGalG.value=(valNum*0.2642).toFixed(4);
+    inputNcmG.value=(valNum*0.7988).toFixed(4);
+  }
+}
+</script>
+
+
+<!-- Temp -->
+<script>
+function tempConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputCelsius = document.getElementById("inputCelsius");
+  var inputFahrenheit = document.getElementById("inputFahrenheit");
+  
+  if (source=="inputCelsius") {
+    inputFahrenheit.value=(valNum*1.8+32).toFixed(4);
+  }
+  if (source=="inputFahrenheit") {
+    inputCelsius.value=((valNum-32)/1.8).toFixed(4);
+  }
+}
+</script>
+
+<!-- Crude-->
+
+<!-- Power & Energy-->
+<script>
+function powerConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputHorsepower = document.getElementById("inputHorsepower");
+  var inputKilowatts = document.getElementById("inputKilowatts");
+  
+  if (source=="inputHorsepower") {
+    inputKilowatts.value=(valNum*0.74569987).toFixed(4);
+  }
+  if (source=="inputKilowatts") {
+    inputHorsepower.value=(valNum/0.74569987).toFixed(4);
+  }
+}
+</script>
+<script>
+function energyConverter(source,valNum) {
+  valNum = parseFloat(valNum);
+  var inputBtu = document.getElementById("inputBtu");
+  var inputJoule = document.getElementById("inputJoule");
+  
+  if (source=="inputBtu") {
+    inputJoule.value=(valNum*1055.05585).toFixed(4);
+  }
+  if (source=="inputJoule") {
+    inputBtu.value=(valNum/1055.05585).toFixed(4);
+  }
+}
+</script>
+
+</body>
+</html>
