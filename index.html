@@ -1,7 +1,7 @@
 <html>
 <head>
-<title>GP Ltd</title>
 <link rel="shortcut icon" href="gplogo.png">
+<title>GP Ltd</title>
 <style>
 table {
   border-collapse: collapse;
@@ -53,10 +53,9 @@ body {
 		<li><a href="#calc7">Temperature</a></li>
 		<li><a href="#calc8">Pressure</a></li>
 		<li><a href="#calc9">Volume</a></li>
-		<li><a href="#calc4">Natural Gas</a></li>
 		<li><a href="#calc5">Crude Oil</a></li>
-		<li><a href="#calc1">Power and Energy</a></li>
-		<li style="float:right"><a href="#home" class="active" >Quantity Conversions Calculator</a></li>		
+		<li><a href="#calc1">Power/Energy</a></li>
+		<li style="float:right"><a href="#home" class="active">Calculator</a></li>		
         </ul>
 </nav>
 </div>
@@ -234,42 +233,6 @@ body {
 </table>
 </form>
 </div>
-
-<h2 id="calc4" style="color:Black; text-align:center;">Natural Gas</h2>
-<div id="tablebg">
-<form>
-<table border=2s>
- <tr>
-    <th colspan=4>Natural Gas</th>
-  </tr>
-<tr>
-    <td>Pounds</td>
-    <td><input id="inputPoundsG" type="number" placeholder="lb" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-    <td>Kilorams</td>
-    <td><input id="inputKilogramsG" type="number" placeholder="Kg" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-  </tr>
-  <tr>
-    <td>Ton</td>
-    <td><input id="inputTonG" type="number" placeholder="t" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-    <td>Metric Ton </td>
-    <td><input id="inputMtonG" type="number" placeholder="Mt" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-  </tr>
-  <tr>
-    <td>Std Cubic Feet</td>
-    <td><input id="inputSCFG" type="number" placeholder="SCF" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-    <td>Normal Cubic Meters</td>
-    <td><input id="inputNcmG" type="number" placeholder="Nm3" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-  </tr>
-  <tr>
-    <td>Liquid Gallons</td>
-    <td><input id="inputGalG" type="number" placeholder="Gal" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-    <td>Liquid Liters</td>
-    <td><input id="inputLitersG" type="number" placeholder="L" oninput="ngasConverter(this.id,this.value)" onchange="ngasConverter(this.id,this.value)"></input></td>
-  </tr>
-</table>
-</form>
-</div>
-
 
 <h2 id="calc5" style="color:Black; text-align:center;">Crude Oil</h2>
 <div id="tablebg">
