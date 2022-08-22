@@ -3,17 +3,6 @@
 <title>GP Ltd</title>
 <link rel="icon" href="gplogo.png" type="image/icon type">
 <style>
-@media only screen and (max-width: 600px) {
-	ul{
-	  font-size: 10px;
-	}
-	body{
-
-	min-width:1000px;
-}
-
-}
-
 
 table {
   border-collapse: collapse;
@@ -63,9 +52,6 @@ body {
 		<li><a href="#calc2">Nitrogen</a></li>
 		<li><a href="#calc6">CO2</a></li>
 		<li><a href="#calc7">Temperature</a></li>
-		<li><a href="#calc8">Pressure</a></li>
-		<li><a href="#calc9">Volume</a></li>
-		<li><a href="#calc5">Crude Oil</a></li>
 		<li><a href="#calc1">Power/Energy</a></li>
 		<li style="float:right"><a href="#home" class="active">Quantity Coversions</a></li>		
         </ul>
@@ -198,85 +184,6 @@ body {
 </div>
 
 
-<h2 id="calc8" style="color:Black; text-align:center;">Pressure</h2>
-<div id="tablebg">
-<form>
-<table border=2s>
-<tr>
-    <th colspan=4>Pressure</th>
-  <tr>
-<tr>
-    <td>Cubic Meters </td>
-    <td><input type="number"></input></td>
-    <td>Therms </td>
-    <td><input type="number"></input></td>
-</tr>
-<tr>    
-    <td>Btus </td>
-    <td><input type="number"></input></td>
-    <td>Mega Joules </td>
-    <td><input type="number"></input></td>
-</tr>
-</table>
-</form>
-</div>
-
-
-<h2 id="calc9" style="color:Black; text-align:center;">Volume</h2>
-<div id="tablebg">
-<form>
-<table border=2s>
-<tr>
-    <th colspan=4>Volume</th>
-  <tr>
-<tr>
-<tr>
-    <td>Cubic Meters </td>
-    <td><input type="number"></input></td>
-    <td>Therms </td>
-    <td><input type="number"></input></td>
-</tr>
-<tr>    
-    <td>Btus </td>
-    <td><input type="number"></input></td>
-    <td>Mega Joules </td>
-    <td><input type="number"></input></td>
-</tr>
-</table>
-</form>
-</div>
-
-<h2 id="calc5" style="color:Black; text-align:center;">Crude Oil</h2>
-<div id="tablebg">
-<form>
-<table border=2s>
- <tr>
-    <th colspan=4>Crude Oil</th>
-  <tr>
-<tr>
-    <td>Meteric Tons </td>
-    <td><input type="number"></input></td>
-    <td>Long Tons </td>
-    <td><input type="number"></input></td>
-</tr>
-<tr>    
-    <td>Btus </td>
-    <td><input type="number"></input></td>
-    <td>Mega Joules </td>
-    <td><input type="number"></input></td>
-</tr>
-<tr>    
-    <td>Barrels </td>
-    <td><input type="number"></input></td>
-    <td>US Gallons </td>
-    <td><input type="number"></input></td>
-</tr>
-</table>
-</form>
-</div>
-
-
-
 <h2 id="calc1" style="color:Black; text-align:center;">Power and Energy</h2>
 <div id="tablebg">
 <form>
@@ -302,8 +209,6 @@ body {
 </table>
 </form>
 </div>
-
-
 <!-- Oxygen-->
 <script>
 function gasConverter(source,valNum) {
@@ -672,7 +577,6 @@ function tempConverter(source,valNum) {
 }
 </script>
 
-<!-- Crude-->
 
 <!-- Power & Energy-->
 <script>
@@ -704,8 +608,8 @@ function energyConverter(source,valNum) {
 }
 </script>
 
-<p style="text-align:center;"><b>Designed by <a href="https://emmanueloladosu.com">Emmanuel Oladosu</a></b></p>
 
+<p style="text-align:center;"><b>Designed by <a href="https://emmanueloladosu.com">Emmanuel Oladosu</a></b></p>
 
 </body>
 </html>
